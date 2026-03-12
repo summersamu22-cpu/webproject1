@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="navbar container">
+        <a href="index.html" class="logo" aria-label="HOLD-IT főoldal" data-i18n-aria-label="logoAria">
+            <img src="logo.png" alt="HOLD-IT logó" data-i18n-alt="logoAlt">
+            <span>HOLD-IT</span>
+        </a>
+
+        <div class="nav-area">
+            <nav id="primary-navigation" class="nav-links" aria-label="Fő navigáció" data-i18n-aria-label="mainNav">
+                <a href="index.html" data-i18n="navHome">Főoldal</a>
+                <a href="index1.html" data-i18n="navProducts">Termékek</a>
+                <a href="index2.html" data-i18n="navAbout">Rólunk</a>
+                <a href="index3.html" data-i18n="navContact">Kapcsolat</a>
+            </nav>
+
+            <div class="lang-switch" aria-label="Language switcher">
+                <button class="lang-option active" id="lang-hu" type="button">HU</button>
+                <span class="lang-divider">|</span>
+                <button class="lang-option" id="lang-sr" type="button">SR</button>
+            </div>
+
+            <button
+                    class="menu-btn"
+                    type="button"
+                    aria-label="Menü megnyitása"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation"
+                    data-i18n-aria-label="menuOpen"
+            >
+                ☰
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero product-page">
+        <div class="container product-container">
+            <div class="product-visual reveal">
+                <div class="image-wrapper">
+                    <img src="termek.png" alt="HOLD-IT Geometriai Szett" data-i18n-alt="productImgAlt">
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+
+            <div class="hero-text reveal">
+                <p class="eyebrow" data-i18n="productCategory">Oktatási Segédeszköz</p>
+                <h1 class="gradient-text" data-i18n="productName">QuadraBox</h1>
+                <p class="hero-description" data-i18n="productLongDesc">
+                    Ez az összeállítás a legalapvetőbb mértani testeket tartalmazza, amelyek a középiskolai és egyetemi geometria oktatás alapkövei. A 3D nyomtatott formák segítenek a térfogat- és felszínszámítási képletek vizualizálásában.
+                </p>
+
+                <div class="product-details">
+                    <div class="detail-item">
+                        <strong data-i18n="matLabel">Anyag:</strong>
+                        <span data-i18n="matValue">PLA</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong data-i18n="pieceLabel">Darabszám:</strong>
+                        <span data-i18n="pieceValue">12 különböző test</span>
+                    </div>
+                </div>
+
+                <ul class="feature-list">
+                    <li data-i18n="feat1">Precíz, matematikai pontosságú élek</li>
+                    <li data-i18n="feat2">Könnyű, de strapabíró kivitel</li>
+                    <li data-i18n="feat3">Egyedi színkombinációk lehetősége</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 HOLD-IT</p>
+    <div class="social-links">
+        <a href="https://instagram.com/holditgeo/">Instagram</a>
+        <p>holditgeometry@gmail.com</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

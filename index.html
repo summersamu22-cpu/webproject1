@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOLD-IT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar container">
+      <a href="#" class="logo" aria-label="HOLD-IT főoldal" data-i18n-aria-label="logoAria">
+        <img src="logo.png" alt="HOLD-IT logó" data-i18n-alt="logoAlt">
+        <span>HOLD-IT</span>
+      </a>
+
+      <div class="nav-area">
+        <nav id="primary-navigation" class="nav-links" aria-label="Fő navigáció" data-i18n-aria-label="mainNav">
+          <a href="index.html" data-i18n="navHome">Főoldal</a>
+          <a href="index1.html" data-i18n="navProducts">Termékek</a>
+          <a href="index2.html" data-i18n="navAbout">Rólunk</a>
+          <a href="index3.html" data-i18n="navContact">Kapcsolat</a>
+        </nav>
+
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-option active" id="lang-hu" type="button">HU</button>
+          <span class="lang-divider">|</span>
+          <button class="lang-option" id="lang-sr" type="button">SR</button>
+        </div>
+
+        <button
+          class="menu-btn"
+          type="button"
+          aria-label="Menü megnyitása"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+          data-i18n-aria-label="menuOpen"
+        >
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text reveal">
+          <p class="eyebrow" data-i18n="eyebrow">Interaktív matematikaoktatás</p>
+          <h1 data-i18n="heroTitle">Tartsd a jövőt<br>a kezedben</h1>
+          <p class="hero-description" data-i18n="heroDescription">
+            3D nyomtatott geometriai testekkel tanítjuk a matematikát
+            látványosan, kézzelfoghatóan és interaktív módon.
+          </p>
+          <div class="hero-actions">
+            <a href="#services" class="btn" data-i18n="servicesBtn">Szolgáltatások</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <p class="section-label" data-i18n="whatWeOffer">Mit kínálunk?</p>
+        <h2 data-i18n="ourServices">Szolgáltatásaink</h2>
+
+        <div class="cards">
+          <article class="card reveal">
+            <h3 data-i18n="card1Title">3D Modellek</h3>
+            <p data-i18n="card1Text">Geometriai testek kézzelfogható, fizikai modellekkel.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3 data-i18n="card2Title">Interaktív Tanítás</h3>
+            <p data-i18n="card2Text">Érthetőbb tanulás vizuális és tapintható modellekkel.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3 data-i18n="card3Title">Gyakorlati foglalkozások</h3>
+            <p data-i18n="card3Text">A gördülékenyebb geometriatanulásért.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 HOLD-IT</p>
+    <div class="social-links">
+      <a href="https://instagram.com/holditgeo/">Instagram</a>
+      <p>holditgeometry@gmail.com</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
