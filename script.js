@@ -13,13 +13,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const translations = {
         hu: {
+            homeTitle: "HOLD-IT | Kezdőlap",
+            productPageTitle: "Termékek | HOLD-IT",
+            workshopTitle: "Workshopok | HOLD-IT",
+            aboutTitle: "Rólunk | HOLD-IT",
+
             logoAria: "HOLD-IT főoldal",
             logoAlt: "HOLD-IT logó",
             mainNav: "Fő navigáció",
             navHome: "Főoldal",
             navProducts: "Termékek",
-            navAbout: "Workshopok",
-            navContact: "Rólunk",
+            navWorkshops: "Workshopok",
+            navAbout: "Rólunk",
             menuOpen: "Menü megnyitása",
 
             eyebrow: "Interaktív matematikaoktatás",
@@ -35,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
             card3Title: "Gyakorlati foglalkozások",
             card3Text: "A gördülékenyebb geometriatanulásért.",
 
-            // Termék (QuadraBox) oldal
             productImgAlt: "HOLD-IT Geometriai Szett",
             productCategory: "Oktatási Segédeszköz",
             productName: "QuadraBox",
@@ -48,9 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
             feat2: "Könnyű, de strapabíró kivitel",
             feat3: "Egyedi színkombinációk lehetősége",
 
-            workshopTitle: "Workshop | HOLD-IT",
             workshopEyebrow: "KÖVETKEZŐ ESEMÉNY",
-            workshopHeading: "Építsd fel a tudásod <br><span class=\"hero-text\">a gyakorlatban</span>",
+            workshopHeading: "Építsd fel a tudásod <br><span class=\"hero-text gradient-text\">a gyakorlatban</span>",
             workshopDescription: "Csatlakozz interaktív workshopjainkhoz, ahol a diákok saját maguk dolgozhatnak a 3D nyomtatott geometriai formákkal. Érintsd meg a matematikát, és értsd meg a térlátás alapjait kézzelfoghatóan!",
             workshopDate: "<strong>Időpont:</strong> 2026. április 15. | 14:00 - 17:00",
             workshopLocation: "<strong>Helyszín:</strong> Hold-IT Központ",
@@ -58,33 +61,37 @@ document.addEventListener("DOMContentLoaded", () => {
             workshopImgAlt1: "3D nyomtatott geometriai formák workshopon",
             workshopImgAlt2: "Fotó a workshopról",
 
-            aboutTitle: "Rólunk - HOLD-IT",
             teamHeading: "A csapat <span class=\"gradient-text\">mögöttünk</span>",
             teamSubtitle: "Ismerd meg a csapatunkat, akik azért dolgoznak, hogy a matematika tanulása szó szerint kézzelfogható élmény legyen.",
             role1: "Alapító &amp; 3D modellező",
-            desc1: "Felel a geometriai testek precíz megtervezéséért. Célja, hogy a matematika vizuálisan is lenyűgöző legyen.",
+            desc1: "Rövid szöveg.",
             role2: "Csomagolás designer &amp; megvalósító &amp; hivatásos félisten",
-            desc2: "Kidolgozza azokat a módszertanokat, amelyekkel eszközeink a leghatékonyabban építhetők be a tananyagba.",
+            desc2: "Rövid szöveg.",
             role3: "Webfejlesztő",
-            desc3: "Bemutató szöveg",
+            desc3: "Rövid szöveg.",
             role4: "Designer",
-            desc4: "Bemutató szöveg.",
+            desc4: "Rövid szöveg.",
             role5: "Marketing &amp; PR",
-            desc5: "Bemutató szöveg.",
+            desc5: "Rövid szöveg.",
             role6: "Gyártásvezető",
-            desc6: "Bemutató szöveg.",
+            desc6: "Rövid szöveg.",
             role7: "Mentor",
-            desc7: "Bemutató szöveg."
+            desc7: "Rövid szöveg."
         },
 
         sr: {
+            homeTitle: "HOLD-IT | Početna",
+            productPageTitle: "Proizvodi | HOLD-IT",
+            workshopTitle: "Radionice | HOLD-IT",
+            aboutTitle: "O nama | HOLD-IT",
+
             logoAria: "HOLD-IT početna stranica",
             logoAlt: "HOLD-IT logo",
             mainNav: "Glavna navigacija",
             navHome: "Početna",
             navProducts: "Proizvodi",
-            navAbout: "Radionice",
-            navContact: "O nama",
+            navWorkshops: "Radionice",
+            navAbout: "O nama",
             menuOpen: "Otvori meni",
 
             eyebrow: "Interaktivna nastava matematike",
@@ -100,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
             card3Title: "Praktične radionice",
             card3Text: "Za lakše i uspešnije učenje geometrije.",
 
-            // Termék (QuadraBox) oldal
             productImgAlt: "HOLD-IT Geometrijski Set",
             productCategory: "Edukativno pomagalo",
             productName: "QuadraBox",
@@ -113,9 +119,8 @@ document.addEventListener("DOMContentLoaded", () => {
             feat2: "Lagan, ali izdržljiv dizajn",
             feat3: "Mogućnost jedinstvenih kombinacija boja",
 
-            workshopTitle: "Radionice | HOLD-IT",
             workshopEyebrow: "NAREDNI DOGAĐAJ",
-            workshopHeading: "Izgradi svoje znanje <br><span class=\"hero-text\">kroz praksu</span>",
+            workshopHeading: "Izgradi svoje znanje <br><span class=\"hero-text gradient-text\">kroz praksu</span>",
             workshopDescription: "Pridruži se našim interaktivnim radionicama, gde učenici mogu samostalno da rade sa 3D štampanim geometrijskim oblicima. Dodirni matematiku i razumi osnove prostornog razmišljanja na opipljiv način!",
             workshopDate: "<strong>Termin:</strong> 15. april 2026. | 14:00 - 17:00",
             workshopLocation: "<strong>Mesto:</strong> Hold-IT centar",
@@ -123,23 +128,22 @@ document.addEventListener("DOMContentLoaded", () => {
             workshopImgAlt1: "Radionica sa 3D štampanim geometrijskim oblicima",
             workshopImgAlt2: "Fotografija sa radionice",
 
-            aboutTitle: "O nama - HOLD-IT",
             teamHeading: "Tim <span class=\"gradient-text\">iza nas</span>",
             teamSubtitle: "Upoznaj naš tim koji radi na tome da učenje matematike postane doslovno opipljivo iskustvo.",
             role1: "Osnivač &amp; 3D modelar",
-            desc1: "Odgovoran je za precizno projektovanje geometrijskih tela. Njegov cilj je da matematika bude i vizuelno zadivljujuća.",
-            role2: "Dizajner ambalaže &amp; realizator &amp; professionalan polubog",
-            desc2: "Razrađuje metode pomoću kojih se naši alati mogu najefikasnije uključiti u nastavni proces.",
+            desc1: "Kratak opis.",
+            role2: "Dizajner ambalaže &amp; realizator &amp; Professionalni polubog",
+            desc2: "Kratak opis.",
             role3: "Veb programer",
-            desc3: "Kratak opis",
+            desc3: "Kratak opis.",
             role4: "Dizajner",
-            desc4: "Odgovorna je za korisničko iskustvo i čist, moderan vizuelni identitet cele platforme.",
+            desc4: "Kratak opis.",
             role5: "Marketing &amp; PR",
-            desc5: "Njena misija je da naši interaktivni alati stignu do što više škola i učenika širom zemlje.",
+            desc5: "Kratak opis.",
             role6: "Rukovodilac proizvodnje",
-            desc6: "Nadzire procese 3D štampe i garantuje vrhunski kvalitet i dugotrajnost proizvoda.",
+            desc6: "Kratak opis.",
             role7: "Mentor",
-            desc7: "Kratak opis"
+            desc7: "Kratak opis."
         }
     };
 
@@ -174,27 +178,31 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        if (dict.workshopTitle && document.body.dataset.page === "workshop") {
-            document.title = dict.workshopTitle;
-        }
+        // Dinamikus Title váltás minden oldalra
+        const currentPage = document.body.dataset.page;
+        const pageTitles = {
+            home: dict.homeTitle,
+            products: dict.productPageTitle,
+            workshops: dict.workshopTitle,
+            about: dict.aboutTitle
+        };
 
-        if (dict.aboutTitle && document.body.dataset.page === "about") {
-            document.title = dict.aboutTitle;
+        if (currentPage && pageTitles[currentPage]) {
+            document.title = pageTitles[currentPage];
         }
     }
 
-    // --- MÓDOSÍTOTT RÉSZ: Az alapértelmezett nyelv most már biztosan a szerb ("sr") ---
+    // Szerb az alapértelmezett nyelv
     const savedLanguage = localStorage.getItem("language");
-    const defaultLanguage = document.body.dataset.defaultLang || document.documentElement.lang || "sr";
+    const defaultLanguage = "sr";
     setLanguage(savedLanguage || defaultLanguage);
 
-    if (langHuBtn) {
-        langHuBtn.addEventListener("click", () => setLanguage("hu"));
-    }
+    // Oldal megjelenítése a fordítás betöltése után (FOUC elkerülése)
+    document.body.classList.remove('lang-loading');
+    document.body.classList.add('lang-loaded');
 
-    if (langSrBtn) {
-        langSrBtn.addEventListener("click", () => setLanguage("sr"));
-    }
+    if (langHuBtn) langHuBtn.addEventListener("click", () => setLanguage("hu"));
+    if (langSrBtn) langSrBtn.addEventListener("click", () => setLanguage("sr"));
 
     const revealElements = document.querySelectorAll(".reveal");
     if ("IntersectionObserver" in window && revealElements.length > 0) {
@@ -226,13 +234,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const translations = {
         hu: {
+            homeTitle: "HOLD-IT | Kezdőlap",
+            productPageTitle: "Termékek | HOLD-IT",
+            workshopTitle: "Workshopok | HOLD-IT",
+            aboutTitle: "Rólunk | HOLD-IT",
+
             logoAria: "HOLD-IT főoldal",
             logoAlt: "HOLD-IT logó",
             mainNav: "Fő navigáció",
             navHome: "Főoldal",
             navProducts: "Termékek",
-            navAbout: "Workshopok",
-            navContact: "Rólunk",
+            navWorkshops: "Workshopok",
+            navAbout: "Rólunk",
             menuOpen: "Menü megnyitása",
 
             eyebrow: "Interaktív matematikaoktatás",
@@ -248,7 +261,6 @@ document.addEventListener("DOMContentLoaded", () => {
             card3Title: "Gyakorlati foglalkozások",
             card3Text: "A gördülékenyebb geometriatanulásért.",
 
-            // Termék (QuadraBox) oldal
             productImgAlt: "HOLD-IT Geometriai Szett",
             productCategory: "Oktatási Segédeszköz",
             productName: "QuadraBox",
@@ -261,9 +273,8 @@ document.addEventListener("DOMContentLoaded", () => {
             feat2: "Könnyű, de strapabíró kivitel",
             feat3: "Egyedi színkombinációk lehetősége",
 
-            workshopTitle: "Workshop | HOLD-IT",
             workshopEyebrow: "KÖVETKEZŐ ESEMÉNY",
-            workshopHeading: "Építsd fel a tudásod <br><span class=\"hero-text\">a gyakorlatban</span>",
+            workshopHeading: "Építsd fel a tudásod <br><span class=\"hero-text gradient-text\">a gyakorlatban</span>",
             workshopDescription: "Csatlakozz interaktív workshopjainkhoz, ahol a diákok saját maguk dolgozhatnak a 3D nyomtatott geometriai formákkal. Érintsd meg a matematikát, és értsd meg a térlátás alapjait kézzelfoghatóan!",
             workshopDate: "<strong>Időpont:</strong> 2026. április 15. | 14:00 - 17:00",
             workshopLocation: "<strong>Helyszín:</strong> Hold-IT Központ",
@@ -271,33 +282,37 @@ document.addEventListener("DOMContentLoaded", () => {
             workshopImgAlt1: "3D nyomtatott geometriai formák workshopon",
             workshopImgAlt2: "Fotó a workshopról",
 
-            aboutTitle: "Rólunk - HOLD-IT",
             teamHeading: "A csapat <span class=\"gradient-text\">mögöttünk</span>",
             teamSubtitle: "Ismerd meg a csapatunkat, akik azért dolgoznak, hogy a matematika tanulása szó szerint kézzelfogható élmény legyen.",
             role1: "Alapító &amp; 3D modellező",
-            desc1: "Felel a geometriai testek precíz megtervezéséért. Célja, hogy a matematika vizuálisan is lenyűgöző legyen.",
+            desc1: "Rövid szöveg.",
             role2: "Csomagolás designer &amp; megvalósító &amp; hivatásos félisten",
-            desc2: "Kidolgozza azokat a módszertanokat, amelyekkel eszközeink a leghatékonyabban építhetők be a tananyagba.",
+            desc2: "Rövid szöveg.",
             role3: "Webfejlesztő",
-            desc3: "Bemutató szöveg",
+            desc3: "Rövid szöveg.",
             role4: "Designer",
-            desc4: "Bemutató szöveg.",
+            desc4: "Rövid szöveg.",
             role5: "Marketing &amp; PR",
-            desc5: "Bemutató szöveg.",
+            desc5: "Rövid szöveg.",
             role6: "Gyártásvezető",
-            desc6: "Bemutató szöveg.",
+            desc6: "Rövid szöveg.",
             role7: "Mentor",
-            desc7: "Bemutató szöveg."
+            desc7: "Rövid szöveg."
         },
 
         sr: {
+            homeTitle: "HOLD-IT | Početna",
+            productPageTitle: "Proizvodi | HOLD-IT",
+            workshopTitle: "Radionice | HOLD-IT",
+            aboutTitle: "O nama | HOLD-IT",
+
             logoAria: "HOLD-IT početna stranica",
             logoAlt: "HOLD-IT logo",
             mainNav: "Glavna navigacija",
             navHome: "Početna",
             navProducts: "Proizvodi",
-            navAbout: "Radionice",
-            navContact: "O nama",
+            navWorkshops: "Radionice",
+            navAbout: "O nama",
             menuOpen: "Otvori meni",
 
             eyebrow: "Interaktivna nastava matematike",
@@ -313,7 +328,6 @@ document.addEventListener("DOMContentLoaded", () => {
             card3Title: "Praktične radionice",
             card3Text: "Za lakše i uspešnije učenje geometrije.",
 
-            // Termék (QuadraBox) oldal
             productImgAlt: "HOLD-IT Geometrijski Set",
             productCategory: "Edukativno pomagalo",
             productName: "QuadraBox",
@@ -326,9 +340,8 @@ document.addEventListener("DOMContentLoaded", () => {
             feat2: "Lagan, ali izdržljiv dizajn",
             feat3: "Mogućnost jedinstvenih kombinacija boja",
 
-            workshopTitle: "Radionice | HOLD-IT",
             workshopEyebrow: "NAREDNI DOGAĐAJ",
-            workshopHeading: "Izgradi svoje znanje <br><span class=\"hero-text\">kroz praksu</span>",
+            workshopHeading: "Izgradi svoje znanje <br><span class=\"hero-text gradient-text\">kroz praksu</span>",
             workshopDescription: "Pridruži se našim interaktivnim radionicama, gde učenici mogu samostalno da rade sa 3D štampanim geometrijskim oblicima. Dodirni matematiku i razumi osnove prostornog razmišljanja na opipljiv način!",
             workshopDate: "<strong>Termin:</strong> 15. april 2026. | 14:00 - 17:00",
             workshopLocation: "<strong>Mesto:</strong> Hold-IT centar",
@@ -336,23 +349,22 @@ document.addEventListener("DOMContentLoaded", () => {
             workshopImgAlt1: "Radionica sa 3D štampanim geometrijskim oblicima",
             workshopImgAlt2: "Fotografija sa radionice",
 
-            aboutTitle: "O nama - HOLD-IT",
             teamHeading: "Tim <span class=\"gradient-text\">iza nas</span>",
             teamSubtitle: "Upoznaj naš tim koji radi na tome da učenje matematike postane doslovno opipljivo iskustvo.",
             role1: "Osnivač &amp; 3D modelar",
-            desc1: "Odgovoran je za precizno projektovanje geometrijskih tela. Njegov cilj je da matematika bude i vizuelno zadivljujuća.",
-            role2: "Dizajner ambalaže &amp; realizator &amp; professionalan polubog",
-            desc2: "Razrađuje metode pomoću kojih se naši alati mogu najefikasnije uključiti u nastavni proces.",
+            desc1: "Kratak opis.",
+            role2: "Dizajner ambalaže &amp; realizator &amp; Professionalni polubog",
+            desc2: "Kratak opis.",
             role3: "Veb programer",
-            desc3: "Kratak opis",
+            desc3: "Kratak opis.",
             role4: "Dizajner",
-            desc4: "Odgovorna je za korisničko iskustvo i čist, moderan vizuelni identitet cele platforme.",
+            desc4: "Kratak opis.",
             role5: "Marketing &amp; PR",
-            desc5: "Njena misija je da naši interaktivni alati stignu do što više škola i učenika širom zemlje.",
+            desc5: "Kratak opis.",
             role6: "Rukovodilac proizvodnje",
-            desc6: "Nadzire procese 3D štampe i garantuje vrhunski kvalitet i dugotrajnost proizvoda.",
+            desc6: "Kratak opis.",
             role7: "Mentor",
-            desc7: "Kratak opis"
+            desc7: "Kratak opis."
         }
     };
 
@@ -387,27 +399,31 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        if (dict.workshopTitle && document.body.dataset.page === "workshop") {
-            document.title = dict.workshopTitle;
-        }
+        // Dinamikus Title váltás minden oldalra
+        const currentPage = document.body.dataset.page;
+        const pageTitles = {
+            home: dict.homeTitle,
+            products: dict.productPageTitle,
+            workshops: dict.workshopTitle,
+            about: dict.aboutTitle
+        };
 
-        if (dict.aboutTitle && document.body.dataset.page === "about") {
-            document.title = dict.aboutTitle;
+        if (currentPage && pageTitles[currentPage]) {
+            document.title = pageTitles[currentPage];
         }
     }
 
-    // --- MÓDOSÍTOTT RÉSZ: Az alapértelmezett nyelv most már biztosan a szerb ("sr") ---
+    // Szerb az alapértelmezett nyelv
     const savedLanguage = localStorage.getItem("language");
-    const defaultLanguage = document.body.dataset.defaultLang || document.documentElement.lang || "sr";
+    const defaultLanguage = "sr";
     setLanguage(savedLanguage || defaultLanguage);
 
-    if (langHuBtn) {
-        langHuBtn.addEventListener("click", () => setLanguage("hu"));
-    }
+    // Oldal megjelenítése a fordítás betöltése után (FOUC elkerülése)
+    document.body.classList.remove('lang-loading');
+    document.body.classList.add('lang-loaded');
 
-    if (langSrBtn) {
-        langSrBtn.addEventListener("click", () => setLanguage("sr"));
-    }
+    if (langHuBtn) langHuBtn.addEventListener("click", () => setLanguage("hu"));
+    if (langSrBtn) langSrBtn.addEventListener("click", () => setLanguage("sr"));
 
     const revealElements = document.querySelectorAll(".reveal");
     if ("IntersectionObserver" in window && revealElements.length > 0) {
