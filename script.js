@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const langHuBtn = document.querySelector("#lang-hu");
     const langSrBtn = document.querySelector("#lang-sr");
 
+    // Mobil menü kezelése
     if (menuBtn && navLinks) {
         menuBtn.addEventListener("click", () => {
             const isOpen = navLinks.classList.toggle("active");
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Fordítások
     const translations = {
         hu: {
             logoAria: "HOLD-IT főoldal",
@@ -183,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // --- MÓDOSÍTOTT RÉSZ: Az alapértelmezett nyelv most már biztosan a szerb ("sr") ---
+    // Alapértelmezett nyelv beállítása
     const savedLanguage = localStorage.getItem("language");
     const defaultLanguage = document.body.dataset.defaultLang || document.documentElement.lang || "sr";
     setLanguage(savedLanguage || defaultLanguage);
@@ -196,6 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
         langSrBtn.addEventListener("click", () => setLanguage("sr"));
     }
 
+    // Scroll reveal animáció (Intersection Observer)
     const revealElements = document.querySelectorAll(".reveal");
     if ("IntersectionObserver" in window && revealElements.length > 0) {
         const observer = new IntersectionObserver((entries, obs) => {
