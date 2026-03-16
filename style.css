@@ -226,11 +226,9 @@ button {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    margin: 0 auto;
-    justify-items: center;
+    grid-template-columns: repeat(3, 320px);
+    justify-content: center;
+    gap: 24px;
 }
 
 .team-card {
@@ -249,43 +247,19 @@ button {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-
-.team-card:hover {
-    transform: translateY(-8px);
-    border-color: #f09392;
-    box-shadow: 0 15px 40px rgba(240, 147, 146, 0.15);
+.team-card-balint-nora {
+    grid-column: 2;
 }
 
-.team-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    padding: 4px;
-    background: linear-gradient(90deg, #f09dw2, #8be2bc); /* Színátmenetes gyűrű */
-}
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
+        justify-content: center;
+    }
 
-.team-name {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0 0 5px 0;
-}
-
-.team-role {
-    font-size: 0.9rem;
-    color: #8be2bc; /* Mentazöld pozíció */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0 0 20px 0;
-    font-weight: 500;
-}
-
-.team-desc {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #b0b0b0;
-    margin: 0;
+    .team-card-balint-nora {
+        grid-column: auto;
+    }
 }
 .eyebrow {
     display: inline-block;
@@ -722,5 +696,158 @@ footer {
         font-size: 2.2rem;
         line-height: 1.25;
         padding-bottom: 0.12em;
+    }
+
+}
+.team-section {
+    padding: 120px 0 80px;
+}
+
+.team-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 48px;
+}
+
+.team-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 16px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.team-subtitle {
+    color: #b8b8b8;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 700px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    justify-content: center;
+    justify-items: center;
+    align-items: stretch;
+    gap: 48px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.team-card.profile-card {
+    width: 100%;
+    max-width: 320px;
+    background: #121212;
+    border-radius: 25px;
+    padding: 36px 24px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 100%;
+    justify-self: center;
+}
+
+.team-card.profile-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.team-grid .team-card.profile-card:last-child {
+    grid-column: 2 / 3;
+    justify-self: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.arrow {
+    font-size: 18px;
+    margin-bottom: 12px;
+    opacity: 0.8;
+    color: #ffffff;
+}
+
+.team-name {
+    font-size: 28px;
+    margin: 5px 0 8px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.team-role {
+    color: #5bbd8f;
+    letter-spacing: 1.5px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 24px;
+    text-transform: uppercase;
+}
+
+.team-desc {
+    color: #8d8d8d;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+    }
+
+    .team-grid .team-card.profile-card:last-child {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: min(100%, 360px);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-section {
+        padding: 100px 0 60px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .team-grid .team-card.profile-card:last-child {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .team-card.profile-card {
+        padding: 30px 20px;
+    }
+
+    .team-name {
+        font-size: 24px;
+    }
+
+    .team-desc {
+        font-size: 15px;
     }
 }
