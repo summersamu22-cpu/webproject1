@@ -1,3 +1,14 @@
+/* Ezt tedd a style.css legelejére! */
+body.lang-loading {
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.lang-loaded {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
 :root {
     --bg: #050505;
     --bg-soft: #101010;
