@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O nama - HOLD-IT</title>
+    <title>O nama | HOLD-IT</title>
     <link rel="icon" type="image/x-icon" href="Workshop1.JPG">
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="about" data-default-lang="sr">
+<body class="lang-loading" data-page="about">
 <header class="site-header">
     <div class="navbar container">
         <a href="index.html" class="logo" aria-label="HOLD-IT početna stranica" data-i18n-aria-label="logoAria">
@@ -19,9 +19,10 @@
             <nav id="primary-navigation" class="nav-links" aria-label="Glavna navigacija" data-i18n-aria-label="mainNav">
                 <a href="index.html" data-i18n="navHome">Početna</a>
                 <a href="index1.html" data-i18n="navProducts">Proizvodi</a>
-                <a href="index2.html" data-i18n="navAbout">Radionice</a>
-                <a href="index3.html" data-i18n="navContact">O nama</a>
+                <a href="index2.html" data-i18n="navWorkshops">Radionice</a>
+                <a href="index3.html" data-i18n="navAbout">O nama</a>
             </nav>
+
 
             <div class="lang-switch" aria-label="Language switcher">
                 <button class="lang-option" id="lang-hu" type="button">HU</button>
@@ -29,16 +30,7 @@
                 <button class="lang-option active" id="lang-sr" type="button">SR</button>
             </div>
 
-            <button
-                    class="menu-btn"
-                    type="button"
-                    aria-label="Otvori meni"
-                    aria-expanded="false"
-                    aria-controls="primary-navigation"
-                    data-i18n-aria-label="menuOpen"
-            >
-                ☰
-            </button>
+            <button class="menu-btn" type="button" aria-label="Otvori meni" aria-expanded="false" aria-controls="primary-navigation" data-i18n-aria-label="menuOpen">☰</button>
         </div>
     </div>
 </header>
@@ -46,7 +38,7 @@
 <main>
     <section id="rolunk" class="team-section">
         <div class="container">
-            <div class="team-header">
+            <div class="team-header reveal">
                 <h2 class="team-title" data-i18n="teamHeading">Tim <span class="gradient-text">iza nas</span></h2>
                 <p class="team-subtitle" data-i18n="teamSubtitle">
                     Upoznaj naš tim koji radi na tome da učenje matematike postane doslovno opipljivo iskustvo.
@@ -54,7 +46,7 @@
             </div>
 
             <div class="team-grid">
-                <div class="team-card profile-card">
+                <div class="team-card profile-card reveal">
                     <div class="profile-img">
                         <img src="enokprofkep.jpg" alt="Papp Szabolcs">
                     </div>
@@ -63,191 +55,58 @@
                     <p class="team-desc" data-i18n="desc1">Odgovoran je za precizno projektovanje geometrijskih tela. Njegov cilj je da matematika bude i vizuelno zadivljujuća.</p>
                 </div>
 
-                <div class="team-card profile-card">
+                <div class="team-card profile-card reveal">
                     <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Bajai Leon">
+                        <img src="bajai.jpg" alt="Bajai Leon">
                     </div>
                     <h3 class="team-name">Bajai Leon</h3>
-                    <p class="team-role" data-i18n="role2">Dizajner ambalaže &amp; realizator &amp; professional ˛</p>
+                    <p class="team-role" data-i18n="role2">Dizajner ambalaže &amp; realizator</p>
                     <p class="team-desc" data-i18n="desc2">Razrađuje metode pomoću kojih se naši alati mogu najefikasnije uključiti u nastavni proces.</p>
                 </div>
 
-                <div class="team-card profile-card">
+                <div class="team-card profile-card reveal">
                     <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Virág Énok">
+                        <img src="enok.jpg" alt="Virág Énok">
                     </div>
                     <h3 class="team-name">Virág Énok</h3>
                     <p class="team-role" data-i18n="role3">Veb programer</p>
-                    <p class="team-desc" data-i18n="desc3">Kratak opis</p>
+                    <p class="team-desc" data-i18n="desc3">Zadužen je za nesmetano funkcionisanje sajta i optimizaciju korisničkog iskustva.</p>
                 </div>
 
-                <div class="team-card profile-card">
+                <div class="team-card profile-card reveal">
                     <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Engi Anabela">
+                        <img src="anabela.jpg" alt="Engi Anabela">
                     </div>
                     <h3 class="team-name">Engi Anabela</h3>
                     <p class="team-role" data-i18n="role4">Dizajner</p>
                     <p class="team-desc" data-i18n="desc4">Odgovorna je za korisničko iskustvo i čist, moderan vizuelni identitet cele platforme.</p>
                 </div>
 
-                <div class="team-card profile-card">
+                <div class="team-card profile-card reveal">
                     <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Vastag Evelin">
+                        <img src="evelin.jpg" alt="Vastag Evelin">
                     </div>
                     <h3 class="team-name">Vastag Evelin</h3>
                     <p class="team-role" data-i18n="role5">Marketing &amp; PR</p>
                     <p class="team-desc" data-i18n="desc5">Njena misija je da naši interaktivni alati stignu do što više škola i učenika širom zemlje.</p>
                 </div>
 
-                <div class="team-card profile-card">
+                <div class="team-card profile-card reveal">
                     <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Kovács Bálint">
+                        <img src="balint.jpg" alt="Kovács Bálint">
                     </div>
                     <h3 class="team-name">Kovács Bálint</h3>
                     <p class="team-role" data-i18n="role6">Rukovodilac proizvodnje</p>
                     <p class="team-desc" data-i18n="desc6">Nadzire procese 3D štampe i garantuje vrhunski kvalitet i dugotrajnost proizvoda.</p>
                 </div>
 
-                <div class="team-card profile-card team-card-balint-nora">
+                <div class="team-card profile-card team-card-balint-nora reveal">
                     <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Bálint Nóra">
+                        <img src="nora.jpg" alt="Bálint Nóra">
                     </div>
                     <h3 class="team-name">Bálint Nóra</h3>
                     <p class="team-role" data-i18n="role7">Mentor</p>
-                    <p class="team-desc" data-i18n="desc7">Kratak opis</p>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-<footer>
-    <p>© 2026 HOLD-IT</p>
-    <div class="social-links">
-        <a href="https://instagram.com/holditgeo/">Instagram</a>
-        <p>holditgeometry@gmail.com</p>
-    </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="sr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O nama - HOLD-IT</title>
-    <link rel="icon" type="image/x-icon" href="Workshop1.JPG">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body data-page="about" data-default-lang="sr">
-<header class="site-header">
-    <div class="navbar container">
-        <a href="index.html" class="logo" aria-label="HOLD-IT početna stranica" data-i18n-aria-label="logoAria">
-            <img src="logo.png" alt="HOLD-IT logo" data-i18n-alt="logoAlt">
-            <span>HOLD-IT</span>
-        </a>
-
-        <div class="nav-area">
-            <nav id="primary-navigation" class="nav-links" aria-label="Glavna navigacija" data-i18n-aria-label="mainNav">
-                <a href="index.html" data-i18n="navHome">Početna</a>
-                <a href="index1.html" data-i18n="navProducts">Proizvodi</a>
-                <a href="index2.html" data-i18n="navAbout">Radionice</a>
-                <a href="index3.html" data-i18n="navContact">O nama</a>
-            </nav>
-
-            <div class="lang-switch" aria-label="Language switcher">
-                <button class="lang-option" id="lang-hu" type="button">HU</button>
-                <span class="lang-divider">|</span>
-                <button class="lang-option active" id="lang-sr" type="button">SR</button>
-            </div>
-
-            <button
-                    class="menu-btn"
-                    type="button"
-                    aria-label="Otvori meni"
-                    aria-expanded="false"
-                    aria-controls="primary-navigation"
-                    data-i18n-aria-label="menuOpen"
-            >
-                ☰
-            </button>
-        </div>
-    </div>
-</header>
-
-<main>
-    <section id="rolunk" class="team-section">
-        <div class="container">
-            <div class="team-header">
-                <h2 class="team-title" data-i18n="teamHeading">Tim <span class="gradient-text">iza nas</span></h2>
-                <p class="team-subtitle" data-i18n="teamSubtitle">
-                    Upoznaj naš tim koji radi na tome da učenje matematike postane doslovno opipljivo iskustvo.
-                </p>
-            </div>
-
-            <div class="team-grid">
-                <div class="team-card profile-card">
-                    <div class="profile-img">
-                        <img src="enokprofkep.jpg" alt="Papp Szabolcs">
-                    </div>
-                    <h3 class="team-name">Papp Szabolcs</h3>
-                    <p class="team-role" data-i18n="role1">Osnivač &amp; 3D modelar</p>
-                    <p class="team-desc" data-i18n="desc1">Odgovoran je za precizno projektovanje geometrijskih tela. Njegov cilj je da matematika bude i vizuelno zadivljujuća.</p>
-                </div>
-
-                <div class="team-card profile-card">
-                    <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Bajai Leon">
-                    </div>
-                    <h3 class="team-name">Bajai Leon</h3>
-                    <p class="team-role" data-i18n="role2">Dizajner ambalaže &amp; realizator &amp; professional ˛</p>
-                    <p class="team-desc" data-i18n="desc2">Razrađuje metode pomoću kojih se naši alati mogu najefikasnije uključiti u nastavni proces.</p>
-                </div>
-
-                <div class="team-card profile-card">
-                    <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Virág Énok">
-                    </div>
-                    <h3 class="team-name">Virág Énok</h3>
-                    <p class="team-role" data-i18n="role3">Veb programer</p>
-                    <p class="team-desc" data-i18n="desc3">Kratak opis</p>
-                </div>
-
-                <div class="team-card profile-card">
-                    <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Engi Anabela">
-                    </div>
-                    <h3 class="team-name">Engi Anabela</h3>
-                    <p class="team-role" data-i18n="role4">Dizajner</p>
-                    <p class="team-desc" data-i18n="desc4">Odgovorna je za korisničko iskustvo i čist, moderan vizuelni identitet cele platforme.</p>
-                </div>
-
-                <div class="team-card profile-card">
-                    <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Vastag Evelin">
-                    </div>
-                    <h3 class="team-name">Vastag Evelin</h3>
-                    <p class="team-role" data-i18n="role5">Marketing &amp; PR</p>
-                    <p class="team-desc" data-i18n="desc5">Njena misija je da naši interaktivni alati stignu do što više škola i učenika širom zemlje.</p>
-                </div>
-
-                <div class="team-card profile-card">
-                    <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Kovács Bálint">
-                    </div>
-                    <h3 class="team-name">Kovács Bálint</h3>
-                    <p class="team-role" data-i18n="role6">Rukovodilac proizvodnje</p>
-                    <p class="team-desc" data-i18n="desc6">Nadzire procese 3D štampe i garantuje vrhunski kvalitet i dugotrajnost proizvoda.</p>
-                </div>
-
-                <div class="team-card profile-card team-card-balint-nora">
-                    <div class="profile-img">
-                        <img src="data:image/png;base64,[ISTI_BASE64_KAO_SADA]" alt="Bálint Nóra">
-                    </div>
-                    <h3 class="team-name">Bálint Nóra</h3>
-                    <p class="team-role" data-i18n="role7">Mentor</p>
-                    <p class="team-desc" data-i18n="desc7">Kratak opis</p>
+                    <p class="team-desc" data-i18n="desc7">Svojim profesionalnim usmeravanjem i iskustvom podržava kontinuirani razvoj tima.</p>
                 </div>
             </div>
         </div>
