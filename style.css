@@ -1,4 +1,3 @@
-/* Ezt tedd a style.css legelejére! */
 body.lang-loading {
     opacity: 0;
     visibility: hidden;
@@ -39,9 +38,9 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
     background:
-        radial-gradient(circle at top, rgba(122, 255, 214, 0.08), transparent 30%),
-        radial-gradient(circle at right, rgba(255, 122, 122, 0.08), transparent 25%),
-        var(--bg);
+            radial-gradient(circle at top, rgba(122, 255, 214, 0.08), transparent 30%),
+            radial-gradient(circle at right, rgba(255, 122, 122, 0.08), transparent 25%),
+            var(--bg);
     color: var(--text);
     line-height: 1.6;
 }
@@ -76,9 +75,9 @@ button {
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     min-height: 84px;
 }
 
@@ -394,10 +393,10 @@ footer {
     color: var(--text-soft);
 }
 .social-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 @media (max-width: 900px) {
     .menu-btn {
@@ -432,6 +431,7 @@ footer {
         background: rgba(16, 16, 16, 0.95);
         border: 1px solid var(--surface-border);
         box-shadow: var(--shadow);
+        z-index: 1000;
     }
 
     .nav-links.active {
@@ -860,5 +860,72 @@ footer {
 
     .team-desc {
         font-size: 15px;
+    }
+}
+
+
+.products-section {
+    padding: 80px 0;
+}
+
+.product-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+
+.product-row:nth-of-type(odd) {
+    flex-direction: row-reverse;
+}
+
+.product-row:nth-of-type(even) {
+    flex-direction: row;
+}
+
+.product-image,
+.product-info {
+    flex: 1;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid var(--surface-border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.product-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+.gradient-text2 h2 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    background: linear-gradient(90deg, #f19890 0%, #8ae0c1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* MOBIL: Egymás alá rendezés */
+@media (max-width: 900px) {
+    .product-row,
+    .product-row:nth-of-type(odd),
+    .product-row:nth-of-type(even) {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
     }
 }
