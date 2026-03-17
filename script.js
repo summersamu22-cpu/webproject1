@@ -3,17 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelector(".nav-links");
     const langHuBtn = document.querySelector("#lang-hu");
     const langSrBtn = document.querySelector("#lang-sr");
+    const applyBtn = document.querySelector("#apply-btn")
 
-    // --- JAVÍTOTT MOBILMENÜ LOGIKA ---
     if (menuBtn && navLinks) {
-        // Menü gomb megnyitás/bezárás
+        
         menuBtn.addEventListener("click", (e) => {
-            e.stopPropagation(); // Megakadályozza, hogy az esemény továbbterjedjen
+            e.stopPropagation();
             const isOpen = navLinks.classList.toggle("active");
             menuBtn.setAttribute("aria-expanded", String(isOpen));
         });
 
-        // 1. Zárjuk be a menüt, ha rákattintanak egy linkre (nagyon fontos mobilon!)
+        
         navLinks.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => {
                 navLinks.classList.remove("active");
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // 2. Zárjuk be a menüt, ha a felhasználó bárhova máshova (a menün kívülre) kattint
+       
         document.addEventListener("click", (e) => {
             if (!navLinks.contains(e.target) && !menuBtn.contains(e.target) && navLinks.classList.contains("active")) {
                 navLinks.classList.remove("active");
@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-    // --- MOBILMENÜ LOGIKA VÉGE ---
 
+    let currentDict = {};
     const translations = {
         hu: {
             homeTitle: "HOLD-IT | Kezdőlap",
@@ -67,19 +67,30 @@ document.addEventListener("DOMContentLoaded", () => {
             matLabel: "Anyag:",
             matValue: "PLA",
             pieceLabel: "Darabszám:",
-            pieceValue: "12 különböző test",
+            pieceValue: "4 különböző test",
             feat1: "Precíz, matematikai pontosságú élek",
             feat2: "Könnyű, de strapabíró kivitel",
             feat3: "Egyedi színkombinációk lehetősége",
+            prodTitle1: "Gúla",
+            prodDesc1: "A gúla tökéletes eszköz a térfogatszámítás alapjainak elsajátításához. 3D nyomtatott modellünk segítségével könnyedén vizualizálható az alaplap és a magasság kapcsolata, így a képletek többé nem csak üres számok lesznek.",
+            prodTitle2: "Kúp",
+            prodDesc2: "A kúp modellünkkel a forgástestek világa válik kézzelfoghatóvá. Diákok és tanárok egyaránt imádják, hiszen a palást és az alapkör viszonya azonnal érthetővé válik a fizikai érintés során.",
+            prodTitle3: "Ikozaéder",
+            prodDesc3:"Az ikozaéder a szabályos testek egyik legizgalmasabbika, 20 egyenlő oldalú háromszöglappal. Ez a modell nemcsak a geometria szépségét mutatja be, de a térlátást is kiválóan fejleszti.",
+            prodTitle4: "Kocka",
+            prodDesc4: "A geometria alapköve. A kocka modellünk a legmegfelelőbb kiindulópont a térbeli koordináták, a felszín és a térfogat megértéséhez. Letisztult forma, amely minden matematikai eszköztár kötelező eleme.",
+
 
             workshopEyebrow: "KÖVETKEZŐ ESEMÉNY",
             workshopHeading: "Építsd fel a tudásod <br><span class=\"hero-text gradient-text\">a gyakorlatban</span>",
             workshopDescription: "Csatlakozz interaktív workshopjainkhoz, ahol a diákok saját maguk dolgozhatnak a 3D nyomtatott geometriai formákkal. Érintsd meg a matematikát, és értsd meg a térlátás alapjait kézzelfoghatóan!",
-            workshopDate: "<strong>Időpont:</strong> 2026. április 15. | 14:00 - 17:00",
+            workshopDate: "<strong>Időpont:</strong> Megbeszélés szerint.",
             workshopLocation: "<strong>Helyszín:</strong> Hold-IT Központ",
             workshopAudience: "<strong>Kiknek ajánljuk:</strong> Általános és középiskolásoknak",
             workshopImgAlt1: "3D nyomtatott geometriai formák workshopon",
             workshopImgAlt2: "Fotó a workshopról",
+            workshopBtn: "Jelentkezés",
+            workshopAlert: "Nincs több férőhely! További információkért keress minket Instagramon vagy Gmailen.",
 
             teamHeading: "A csapat <span class=\"gradient-text\">mögöttünk</span>",
             teamSubtitle: "Ismerd meg a csapatunkat, akik azért dolgoznak, hogy a matematika tanulása szó szerint kézzelfogható élmény legyen.",
@@ -141,19 +152,31 @@ document.addEventListener("DOMContentLoaded", () => {
             matLabel: "Materijal:",
             matValue: "PLA",
             pieceLabel: "Broj komada:",
-            pieceValue: "12 različitih tela",
+            pieceValue: "4 različitih tela",
             feat1: "Precizne ivice matematičke tačnosti",
             feat2: "Lagan, ali izdržljiv dizajn",
             feat3: "Mogućnost jedinstvenih kombinacija boja",
+            prodTitle1: "Piramida",
+            prodDesc1: "Piramida je savršeno sredstvo za savladavanje osnova izračunavanja zapremine. Pomoću našeg 3D štampanog modela lako se vizuelizuje odnos između osnove i visine, tako da formule više nisu samo prazni brojevi.",
+            prodTitle2: "Kupa",
+            prodDesc2: "Sa našim modelom kupe, svet rotacionih tela postaje opipljiv. Učenici i nastavnici ga podjednako vole, jer odnos između omotača i osnove postaje odmah jasan kroz fizički dodir.",
+            prodTitle3: "Ikozaedar",
+            prodDesc3:"Ikozaedar je jedno od najzanimljivijih pravilnih tela, sa 20 jednakostraničnih trougaonih strana. Ovaj model ne samo da prikazuje lepotu geometrije, već i odlično razvija prostornu percepciju.",
+            prodTitle4: "Kocka",
+            prodDesc4: "Kamen temeljac geometrije. Naš model kocke je najpogodnija polazna tačka za razumevanje prostornih koordinata, površine i zapremine. Čist oblik, koji je obavezan element svakog matematičkog pribora.",
+
+
 
             workshopEyebrow: "NAREDNI DOGAĐAJ",
             workshopHeading: "Izgradi svoje znanje <br><span class=\"hero-text gradient-text\">kroz praksu</span>",
             workshopDescription: "Pridruži se našim interaktivnim radionicama, gde učenici mogu samostalno da rade sa 3D štampanim geometrijskim oblicima. Dodirni matematiku i razumi osnove prostornog razmišljanja na opipljiv način!",
-            workshopDate: "<strong>Termin:</strong> 15. april 2026. | 14:00 - 17:00",
+            workshopDate: "<strong>Termin:</strong>Prema dogovoru.",
             workshopLocation: "<strong>Mesto:</strong> Hold-IT centar",
             workshopAudience: "<strong>Za koga je namenjeno:</strong> Za učenike osnovnih i srednjih škola",
             workshopImgAlt1: "Radionica sa 3D štampanim geometrijskim oblicima",
             workshopImgAlt2: "Fotografija sa radionice",
+            workshopBtn: "Prijavi se",
+            workshopAlert: "Nema više slobodnih mesta! Za više informacija kontaktirajte nas putem Instagrama ili Gmail-a.",
 
             teamHeading: "Tim <span class=\"gradient-text\">iza nas</span>",
             teamSubtitle: "Upoznaj naš tim koji radi na tome da učenje matematike postane doslovno opipljivo iskustvo.",
@@ -180,6 +203,13 @@ document.addEventListener("DOMContentLoaded", () => {
             desc7: "Profesor programiranja. Svojim iskustvom i stručnim smernicama podržava tim."
         }
     };
+    if (applyBtn) {
+        applyBtn.addEventListener("click", (e) => {
+            e.preventDefault(); 
+            const currentLang = localStorage.getItem("language") || "sr";
+            alert(translations[currentLang].workshopAlert);
+        });
+    }
 
     function setLanguage(lang) {
         const dict = translations[lang];
@@ -212,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Dinamikus Title váltás minden oldalra
+        
         const currentPage = document.body.dataset.page;
         const pageTitles = {
             home: dict.homeTitle,
@@ -225,13 +255,11 @@ document.addEventListener("DOMContentLoaded", () => {
             document.title = pageTitles[currentPage];
         }
     }
-
-    // Szerb az alapértelmezett nyelv
     const savedLanguage = localStorage.getItem("language");
     const defaultLanguage = "sr";
     setLanguage(savedLanguage || defaultLanguage);
 
-    // Oldal megjelenítése a fordítás betöltése után (FOUC elkerülése)
+    
     document.body.classList.remove('lang-loading');
     document.body.classList.add('lang-loaded');
 
