@@ -4,16 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const langHuBtn = document.querySelector("#lang-hu");
     const langSrBtn = document.querySelector("#lang-sr");
     const applyBtn = document.querySelector("#apply-btn")
-
+ ---
     if (menuBtn && navLinks) {
-        
         menuBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
+            e.stopPropagation(); 
             const isOpen = navLinks.classList.toggle("active");
             menuBtn.setAttribute("aria-expanded", String(isOpen));
         });
 
-        
         navLinks.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => {
                 navLinks.classList.remove("active");
@@ -21,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-       
+        
         document.addEventListener("click", (e) => {
             if (!navLinks.contains(e.target) && !menuBtn.contains(e.target) && navLinks.classList.contains("active")) {
                 navLinks.classList.remove("active");
@@ -98,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
             role1: "Alapító &amp; 3D modellező",
             desc1: "Matematikus tanuló, a 3D modellek kidolgozásában és megtervezésében jeleskedik.",
             teamname2:"Bajai Leon",
-            role2: "Csomagolás designer &amp; megvalósító &amp; hivatásos félisten",
+            role2: "Csomagolás designer &amp; megvalósító &amp;",
             desc2: "Gyakorlatias problémamegoldó, aki a termékek csomagolásáért és a fizikai megvalósításért felel.",
             teamname3:"Virág Énok",
             role3: "Webfejlesztő",
@@ -114,7 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
             desc6: "Informatikus tanuló.A 3D nyomtatási folyamatok koordinátora.",
             teamname7: "Bálint Nóra",
             role7: "Mentor",
-            desc7: "Programozás Tanár.Tapasztalatával és szakmai iránymutatásával támogatja a csapatot."
+            desc7: "Programozás Tanár.Tapasztalatával és szakmai iránymutatásával támogatja a csapatot.",
+            support: "Támogatóink:Bolyai Tehetséggondozó Gimnázium,és Kollégium",
         },
 
         sr: {
@@ -184,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
             role1: "Osnivač &amp; 3D modelar",
             desc1: "Student matematike, ističe se u razvoju i dizajniranju 3D modela.",
             teamname2:"Leon Bajai",
-            role2: "Dizajner ambalaže &amp; realizator &amp; profesionalni polubog",
+            role2: "Dizajner ambalaže &amp; realizator &amp;",
             desc2: "Praktičan u rešavanju problema, zadužen za pakovanje proizvoda i fizičku realizaciju.",
             teamname3:"Enok Virag",
             role3: "Veb programer",
@@ -200,12 +199,13 @@ document.addEventListener("DOMContentLoaded", () => {
             desc6: "Student informatike. Koordinator procesa 3D štampe.",
             teamname7:"Nora Balint",
             role7: "Mentor",
-            desc7: "Profesor programiranja. Svojim iskustvom i stručnim smernicama podržava tim."
+            desc7: "Profesor programiranja. Svojim iskustvom i stručnim smernicama podržava tim.",
+            support: "Наши спонзори:Gimnazija sa domom učenika za talentovane učenike „Boljai”",
         }
     };
     if (applyBtn) {
         applyBtn.addEventListener("click", (e) => {
-            e.preventDefault(); 
+            e.preventDefault();
             const currentLang = localStorage.getItem("language") || "sr";
             alert(translations[currentLang].workshopAlert);
         });
@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        
+        // Dinamikus Title váltás minden oldalra
         const currentPage = document.body.dataset.page;
         const pageTitles = {
             home: dict.homeTitle,
@@ -255,11 +255,13 @@ document.addEventListener("DOMContentLoaded", () => {
             document.title = pageTitles[currentPage];
         }
     }
+
+    // Szerb az alapértelmezett nyelv
     const savedLanguage = localStorage.getItem("language");
     const defaultLanguage = "sr";
     setLanguage(savedLanguage || defaultLanguage);
 
-    
+    // Oldal megjelenítése a fordítás betöltése után (FOUC elkerülése)
     document.body.classList.remove('lang-loading');
     document.body.classList.add('lang-loaded');
 
