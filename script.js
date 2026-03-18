@@ -4,14 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const langHuBtn = document.querySelector("#lang-hu");
     const langSrBtn = document.querySelector("#lang-sr");
     const applyBtn = document.querySelector("#apply-btn")
- ---
+
+    // --- JAVÍTOTT MOBILMENÜ LOGIKA ---
     if (menuBtn && navLinks) {
+        // Menü gomb megnyitás/bezárás
         menuBtn.addEventListener("click", (e) => {
-            e.stopPropagation(); 
+            e.stopPropagation(); // Megakadályozza, hogy az esemény továbbterjedjen
             const isOpen = navLinks.classList.toggle("active");
             menuBtn.setAttribute("aria-expanded", String(isOpen));
         });
 
+        // 1. Zárjuk be a menüt, ha rákattintanak egy linkre (nagyon fontos mobilon!)
         navLinks.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => {
                 navLinks.classList.remove("active");
@@ -19,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        
+        // 2. Zárjuk be a menüt, ha a felhasználó bárhova máshova (a menün kívülre) kattint
         document.addEventListener("click", (e) => {
             if (!navLinks.contains(e.target) && !menuBtn.contains(e.target) && navLinks.classList.contains("active")) {
                 navLinks.classList.remove("active");
@@ -205,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     if (applyBtn) {
         applyBtn.addEventListener("click", (e) => {
-            e.preventDefault();
+            e.preventDefault(); // Megállítja az alapértelmezett működést
             const currentLang = localStorage.getItem("language") || "sr";
             alert(translations[currentLang].workshopAlert);
         });
